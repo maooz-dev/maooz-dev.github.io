@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 200vh; /* for scroll testing */
+  background: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding-top: 80px;
+}
+
+.Navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 60px;
+  background-color: #000000ff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  transition: padding 0.3s ease, background-color 0.3s ease;
+  z-index: 1000;
+}
+
+/* When scrolling down - shrink effect */
+.Navbar.scrolled {
+  padding: 8px 60px;
+  background-color: rgba(0, 0, 0, 0.95);
+}
+
+/* Logo styling */
+.Navbar img {
+  width: 60px;
+  height: auto;
+  border-radius: 50%;
+  transition: width 0.3s ease;
+}
+
+.Navbar.scrolled img {
+  width: 50px;
+}
+
+/* Nav menu styling */
+.Nave-menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.Nave-menu li {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.Nave-menu li:hover {
+  color: #ff9800;
+}
+
+/* Underline animation */
+.Nave-menu li img {
+  width: 50px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.Nave-menu li.active img {
+  transform: scaleX(1);
+}
+
+/* Connect button styling */
+.Nave-connect {
+  background: linear-gradient(90deg, #484646ff, #1e90ff);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.Nave-connect:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+
+.AnchorLink {
+  text-decoration: none;
+  color: white;
+}
+
+/* Hide menu icons by default */
+.menu_open,
+.Nav-mob-close {
+  display: none;
+}
+
+/* ============================= */
+/* RESPONSIVE MENU FOR MOBILE */
+/* ============================= */
+@media (max-width: 768px) {
+  .Navbar {
+    padding: 20px 30px;
+  }
+
+  .Nave-connect {
+    display: none;
+  }
+
+  /* Open (hamburger) button */
+  .menu_open {
+    display: block;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  /* Close button inside sidebar */
+  .Nav-mob-close {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    cursor: pointer;
+  }
+
+  /* Sidebar Menu */
+  .Nave-menu {
+    position: fixed;
+    flex-direction: column;
+    align-items: flex-start;
+    top: 0;
+    right: -350px; /* hidden by default */
+    gap: 30px;
+    background-color: black;
+    width: 300px;
+    height: 100%;
+    z-index: 1000;
+    transition: right 0.5s ease;
+    padding: 80px 30px 30px;
+  }
+
+  .Nave-menu.active {
+    right: 0; /* visible */
+  }
+
+  .Nave-menu li {
+    font-size: 22px;
+    padding-left: 20px;
+    flex-direction: row;
+    gap: 15px;
+  }
+}

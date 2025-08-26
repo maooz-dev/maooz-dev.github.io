@@ -1,0 +1,226 @@
+.Footer {
+  background: #111;
+  color: #fff;
+  padding: 30px 50px;   /* kam padding kiya */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;            /* kam gap kiya */
+  font-family: 'Outfit', sans-serif;
+}
+
+.Footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.Footer-top-lef {
+  max-width: 350px; /* thoda aur compact */
+}
+
+.Footer-top-lef img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
+.Footer-top-lef p {
+  color: #bbb;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.footer-top-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.footer-email-input {
+  display: flex;
+  align-items: center;
+  background: #222;
+  padding: 10px 15px;
+  border-radius: 8px;
+  gap: 10px;
+}
+
+.footer-email-input img {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-email-input input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 15px;
+  flex: 1;
+}
+
+/* 🚀 Subscribe button inline with email */
+.footer-email-input + .Subscribe {
+  margin-left: 10px;
+}
+
+.footer-top-right {
+  flex-direction: row;       /* row me set kiya */
+  align-items: center;
+}
+
+.Subscribe {
+  background: linear-gradient(90deg, #ff9800, #1e90ff);
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+  white-space: nowrap;
+}
+
+.Subscribe:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #333;
+  margin: 15px 0;
+}
+
+.footert-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-bottome-left {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.footer-bottom-right {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-bottom-right p {
+  font-size: 13px;
+  color: #bbb;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer-bottom-right p:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+/* Tablets: max-width 992px */
+@media (max-width: 992px) {
+  .Footer {
+    padding: 30px 30px;
+  }
+
+  .Footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+
+  .footer-top-right {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .footer-email-input {
+    width: 100%;
+  }
+
+  .Subscribe {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footert-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .footer-bottom-right {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+/* Mobile: max-width 600px */
+@media (max-width: 600px) {
+  .Footer {
+    padding: 20px 15px;
+  }
+
+  .Footer-top-lef p {
+    font-size: 14px;
+  }
+
+  .footer-email-input input {
+    font-size: 14px;
+  }
+
+  .Subscribe {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .footer-bottome-left,
+  .footer-bottom-right p {
+    font-size: 12px;
+  }
+
+  .Footer-top-lef img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Extra small devices: max-width 480px */
+@media (max-width: 480px) {
+  .Footer-top-lef p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .footer-email-input {
+    padding: 8px 10px;
+  }
+
+  .footer-email-input input {
+    font-size: 13px;
+  }
+
+  .Subscribe {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .footer-bottome-left,
+  .footer-bottom-right p {
+    font-size: 11px;
+  }
+
+  .Footer-top-lef img {
+    width: 50px;
+    height: 50px;
+  }
+}

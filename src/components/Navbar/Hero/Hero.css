@@ -1,0 +1,156 @@
+.Hero {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  gap: 35px;
+  text-align: center;
+}
+
+.Hero img {
+  margin-top: 80px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.Hero img:hover {
+  transform: scale(1.05);
+}
+
+.Hero h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.Hero h1 span {
+  color: #ff9600;
+  background: linear-gradient(90deg, #f07c7cff, #5f9cd8ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.pera {
+  width: 80%;
+  max-width: 700px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #5c5959ff;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+.Hero-action {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 50px;
+  flex-wrap: wrap; /* ensures buttons wrap on small screens */
+  justify-content: center;
+}
+
+.Hero-connect,
+.Hero-resume {
+  padding: 12px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.Hero-connect {
+  background: linear-gradient(90deg, #f07c7cff, #5f9cd8ff);
+  border: 2px solid transparent;
+}
+
+.Hero-connect:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+  border: 2px solid #fff;
+}
+
+.Hero-resume {
+  border: 2px solid #fff;
+}
+
+.Hero-resume:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+  border: 2px solid #fff;
+  background: linear-gradient(90deg, #f07c7cff, #5f9cd8ff);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Mobile: max-width 600px */
+@media (max-width: 600px) {
+  .Hero img {
+    width: 140px;
+    height: 140px;
+    margin-top: 40px;
+  }
+
+  .Hero h1 {
+    font-size: 1.3rem;
+    width: 90%;
+  }
+
+  .pera {
+    width: 90%;
+    margin: 10px auto;
+    line-height: 1.6;
+    font-size: 1rem;
+    padding: 5px 10px;
+  }
+
+  .Hero-action {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+
+  .Hero-connect,
+  .Hero-resume {
+    width: 80%;
+    padding: 10px 0;
+    font-size: 13px;
+  }
+}
+
+/* Extra small screens (phones <480px) */
+@media (max-width: 480px) {
+  .Hero img {
+    width: 120px;
+    height: 120px;
+    margin-top: 30px;
+  }
+
+  .Hero h1 {
+    font-size: 1.2rem;
+  }
+
+  .pera {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .Hero-connect,
+  .Hero-resume {
+    width: 90%;
+    font-size: 12px;
+    padding: 8px 0;
+  }
+
+  .Hero-action {
+    gap: 8px;
+  }
+}

@@ -1,0 +1,247 @@
+/* About Section */
+.About {
+  padding: 60px 80px;
+  background-color: #000;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Title Centered with background image */
+.About-title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.About-title h1 {
+  font-size: 40px;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+   background: linear-gradient(90deg, #ff9800, #1e90ff);
+    background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.About-title img {
+  position: absolute;
+  width: 200px;
+  height: auto;
+  opacity: 0.15; /* light background feel */
+  z-index: 1;
+}
+
+/* Left & Right Layout */
+.About-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.About-left img {
+  width: 250px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.About-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Paragraph Styling */
+.About-para p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #ddd;
+}
+
+/* Skills Section */
+.About-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.About-skill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.3s ease, background 0.3s ease;
+  padding: 5px;
+  border-radius: 6px;
+}
+
+.About-skill:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: scale(1.03);
+}
+
+.About-skill p {
+  margin: 0;
+  font-size: 16px;
+  color: #fff;
+}
+
+.About-skill hr {
+  height: 6px;
+  border: none;
+  background: linear-gradient(90deg, #ff9800, #1e90ff);
+  border-radius: 3px;
+}
+
+/* Achievements Section */
+.About-achivments {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.About-achivment {
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.3s ease, background 0.3s ease;
+  border-radius: 8px;
+}
+
+.About-achivment:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: scale(1.05);
+}
+
+.About-achivment h1:first-child {
+  color: #ff9600;
+  background: linear-gradient(90deg, #f07c7cff, #5f9cd8ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.About-achivment h1:last-child {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ccc;
+}
+
+.About-achivments hr {
+  width: 1px;
+  height: 40px;
+  background-color: #444;
+  border: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .About-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .About-left img {
+    width: 200px;
+  }
+}
+/* Responsive adjustments */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .About {
+    padding: 50px 40px;
+  }
+
+  .About-title h1 {
+    font-size: 32px;
+  }
+
+  .About-title img {
+    width: 150px;
+  }
+
+  .About-left img {
+    width: 220px;
+  }
+
+  .About-para p {
+    font-size: 16px;
+  }
+
+  .About-skill p {
+    font-size: 14px;
+  }
+
+  .About-achivment h1:first-child {
+    font-size: 28px;
+  }
+
+  .About-achivment h1:last-child {
+    font-size: 14px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .About {
+    padding: 40px 20px;
+  }
+
+  .About-title h1 {
+    font-size: 26px;
+  }
+
+  .About-title img {
+    width: 120px;
+  }
+
+  .About-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .About-left img {
+    width: 180px;
+  }
+
+  .About-right {
+    width: 100%;
+  }
+
+  .About-para p {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .About-skill p {
+    font-size: 13px;
+  }
+
+  .About-achivments {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .About-achivments hr {
+    width: 80%;
+    height: 1px;
+  }
+
+  .About-achivment h1:first-child {
+    font-size: 22px;
+  }
+
+  .About-achivment h1:last-child {
+    font-size: 13px;
+  }
+}
